@@ -80,7 +80,7 @@ export function StickyDobby() {
         aria-label={open ? "Đóng chat Dobby" : "Mở chat Dobby"}
         aria-expanded={open}
         className={cn(
-          "group relative h-16 w-16 overflow-hidden rounded-full border-[3px] border-black bg-black brutal-shadow transition-transform hover:scale-105 active:scale-95 sm:h-[4.5rem] sm:w-[4.5rem]",
+          "group relative h-16 w-16 overflow-hidden rounded-full border-[3px] border-black bg-white brutal-shadow transition-transform hover:scale-105 active:scale-95 sm:h-[4.5rem] sm:w-[4.5rem]",
           !open && "animate-cartoon-bounce",
         )}
       >
