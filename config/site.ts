@@ -37,7 +37,7 @@ export const siteConfig = {
   ],
   author: {
     name: "Viet Duong",
-    email: "douviiii@users.noreply.github.com",
+    email: "code.with.dobby@gmail.com",
     jobTitle: "Mobile & Software Developer",
   },
   bio: "Developer Gen Z tại TP.HCM — đam mê Android/Kotlin, React Native và backend Spring Boot. Mình tin mỗi ngày tiến bộ 1% đã là thắng lợi. ༼ つ ◕_◕ ༽つ",
