@@ -1,6 +1,7 @@
 import { About } from "@/components/sections/about";
 import { Footer } from "@/components/sections/footer";
 import { Hero } from "@/components/sections/hero";
+import { Manifesto } from "@/components/sections/manifesto";
 import { Navbar } from "@/components/sections/navbar";
 import { ProjectsGrid } from "@/components/sections/projects-grid";
 import { SocialConnect } from "@/components/sections/social-connect";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Manifesto />
         <ProjectsGrid />
         <SocialConnect />
       </main>

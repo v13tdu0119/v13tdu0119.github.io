@@ -8,6 +8,7 @@ import { SocialIcons } from "@/components/sections/social-icons";
 export function SocialConnect() {
   const socialLinks = getSocialLinks();
   const primarySocial = socialLinks[0];
+  const { connect } = siteConfig;
 
   return (
     <section
@@ -20,12 +21,12 @@ export function SocialConnect() {
           <Card className="w-full border-black bg-white brutal-shadow-lg transition-transform hover:scale-[1.01]">
             <Card.Header className="items-center text-center sm:p-8">
               <Text as="h2" id="connect-heading">
-                Let&apos;s connect
+                {connect.title}
               </Text>
-              <Card.Description className="mx-auto mt-3 max-w-lg text-base">
-                Follow mình trên mạng xã hội để cập nhật project mới, tips dev và
-                random Gen Z thoughts.
+              <Card.Description className="mx-auto mt-3 max-w-lg text-base leading-relaxed">
+                {connect.description}
               </Card.Description>
+              <p className="mt-4 text-sm font-semibold">{connect.hireLine}</p>
             </Card.Header>
 
             <Card.Content className="flex flex-col items-center gap-8 pb-8 sm:pb-10">
@@ -45,12 +46,12 @@ export function SocialConnect() {
                     />
                   }
                 >
-                  Follow trên {primarySocial.key}
+                  Follow @{siteConfig.username} trên {primarySocial.key}
                 </Button>
               )}
 
               <p className="text-sm text-muted-foreground">
-                Hoặc email:{" "}
+                {connect.emailNote}{" "}
                 <a
                   href={`mailto:${siteConfig.author.email}`}
                   className="font-medium text-foreground underline underline-offset-2"

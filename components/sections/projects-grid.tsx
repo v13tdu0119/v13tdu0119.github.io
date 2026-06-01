@@ -18,11 +18,13 @@ export function ProjectsGrid() {
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <Text as="h2" id="projects-heading">
-                Projects đã làm
+                {siteConfig.projectsIntro.title}
               </Text>
-              <p className="mt-2 max-w-xl text-muted-foreground">
-                Một vài side project và công việc thực tế — click để xem demo
-                hoặc source code.
+              <p className="mt-2 max-w-xl leading-relaxed text-muted-foreground">
+                {siteConfig.projectsIntro.description}
+              </p>
+              <p className="mt-3 max-w-xl text-sm font-medium">
+                {siteConfig.projectsIntro.footnote}
               </p>
             </div>
             <Badge

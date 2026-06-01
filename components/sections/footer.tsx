@@ -9,7 +9,8 @@ export function Footer() {
     <footer className="bg-background">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-8 sm:flex-row sm:px-6">
         <p className="text-sm text-muted-foreground">
-          © {year} {siteConfig.name}. Built with Next.js + RetroUI.
+          © {year} {siteConfig.nickname} ({siteConfig.name}) · 1% better daily ·
+          Built with Next.js + RetroUI 🌈
         </p>
         <SocialIcons links={socialLinks} />
       </div>

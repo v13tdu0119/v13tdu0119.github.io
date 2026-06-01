@@ -6,6 +6,8 @@ import { Button } from "@/components/retroui/Button";
 import { Text } from "@/components/retroui/Text";
 
 export function Hero() {
+  const { hero } = siteConfig;
+
   return (
     <section
       className="relative overflow-hidden border-b-2 border-black dot-pattern"
@@ -17,7 +19,7 @@ export function Hero() {
           className="animate-cartoon-pop-in mb-6 w-fit -rotate-2 border-2 border-black font-display shadow-sm"
           style={{ animationDelay: "0.1s" } as CSSProperties}
         >
-          Gen Z × Neo Brutalism
+          {hero.badge}
         </Badge>
 
         <Text
@@ -26,9 +28,9 @@ export function Hero() {
           className="animate-cartoon-slide-up max-w-4xl text-5xl leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
           style={{ animationDelay: "0.2s" } as CSSProperties}
         >
-          Không phải web nào cũng phải{" "}
+          {hero.headline}{" "}
           <span className="inline-block bg-primary px-2 brutal-shadow animate-cartoon-bounce">
-            nhàm chán
+            {hero.headlineHighlight}
           </span>
         </Text>
 
@@ -36,7 +38,14 @@ export function Hero() {
           className="animate-cartoon-slide-up mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
           style={{ animationDelay: "0.35s" }}
         >
-          {siteConfig.tagline} — {siteConfig.description.split("—")[0]?.trim()}
+          {hero.subheadline}
+        </p>
+
+        <p
+          className="animate-cartoon-slide-up mt-4 max-w-2xl text-base font-medium"
+          style={{ animationDelay: "0.42s" }}
+        >
+          {siteConfig.tagline}
         </p>
 
         <div
@@ -44,7 +53,7 @@ export function Hero() {
           style={{ animationDelay: "0.5s" }}
         >
           <Button size="lg" render={<Link href="#projects" />}>
-            Xem projects
+            {hero.ctaPrimary}
           </Button>
           <Button
             size="lg"
@@ -52,7 +61,7 @@ export function Hero() {
             className="bg-white"
             render={<Link href="#connect" />}
           >
-            Kết nối với mình
+            {hero.ctaSecondary}
           </Button>
         </div>
 
@@ -76,7 +85,7 @@ export function Hero() {
       <div
         aria-hidden="true"
         className="animate-cartoon-float pointer-events-none absolute -right-8 top-12 hidden h-32 w-32 border-2 border-black bg-muted lg:block brutal-shadow-lg"
-          style={{ "--float-rotate": "12deg" } as CSSProperties}
+        style={{ "--float-rotate": "12deg" } as CSSProperties}
       />
       <div
         aria-hidden="true"
