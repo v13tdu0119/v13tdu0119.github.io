@@ -97,6 +97,12 @@ export const siteConfig = {
     emailNote: "Email chính thức của Dobby:",
     hireLine: "Status: 🟢 Open to opportunities — internship, junior, freelance đều talk được",
   },
+  stickyBubble: {
+    greeting: "Hey! Dobby đây 👋",
+    message: "Cần dev mobile? Muốn collab? Cứ ping — mình rep nhanh lắm!",
+    ctaEmail: "Gửi email",
+    ctaFacebook: "Nhắn Facebook",
+  },
   techStack: [
     "Kotlin",
     "Android",
