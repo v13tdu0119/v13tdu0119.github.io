@@ -6,6 +6,7 @@ import { Navbar } from "@/components/sections/navbar";
 import { ProjectsGrid } from "@/components/sections/projects-grid";
 import { SocialConnect } from "@/components/sections/social-connect";
 import { StickyDobby } from "@/components/sections/sticky-dobby";
+import { WorkExperienceSection } from "@/components/sections/work-experience";
 import { SplashGate } from "@/components/splash/splash-gate";
 
 export const dynamic = "force-static";
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <WorkExperienceSection />
         <Manifesto />
         <ProjectsGrid />
         <SocialConnect />

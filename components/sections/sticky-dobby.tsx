@@ -2,16 +2,18 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { getSocialLinks, siteConfig } from "@/config/site";
+import { getSocialLinks } from "@/lib/site-content-utils";
 import { Button } from "@/components/retroui/Button";
 import { SocialIcons } from "@/components/sections/social-icons";
+import { useSiteContent } from "@/components/providers/site-content-provider";
 import { cn } from "@/lib/utils";
 
 export function StickyDobby() {
+  const { content } = useSiteContent();
   const [open, setOpen] = useState(false);
-  const socialLinks = getSocialLinks();
-  const { stickyBubble } = siteConfig;
-  const facebookUrl = siteConfig.social.facebook;
+  const socialLinks = getSocialLinks(content);
+  const { stickyBubble } = content;
+  const facebookUrl = content.social.facebook;
 
   useEffect(() => {
     if (!open) return;
@@ -64,7 +66,7 @@ export function StickyDobby() {
                 variant="outline"
                 className="w-full bg-white"
                 render={
-                  <a href={`mailto:${siteConfig.author.email}`} />
+                  <a href={`mailto:${content.author.email}`} />
                 }
               >
                 {stickyBubble.ctaEmail}

@@ -1,12 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { siteConfig } from "@/config/site";
 import { Badge } from "@/components/retroui/Badge";
 import { Button } from "@/components/retroui/Button";
 import { Text } from "@/components/retroui/Text";
+import { useSiteContent } from "@/components/providers/site-content-provider";
 
 export function Hero() {
-  const { hero } = siteConfig;
+  const { content } = useSiteContent();
+  const { hero } = content;
 
   return (
     <section
@@ -45,7 +48,7 @@ export function Hero() {
           className="animate-cartoon-slide-up mt-4 max-w-2xl text-base font-medium"
           style={{ animationDelay: "0.42s" }}
         >
-          {siteConfig.tagline}
+          {content.tagline}
         </p>
 
         <div
@@ -69,7 +72,7 @@ export function Hero() {
           className="animate-cartoon-slide-up mt-12 flex flex-wrap gap-3"
           style={{ animationDelay: "0.65s" }}
         >
-          {siteConfig.heroTags.map((tag, i) => (
+          {content.heroTags.map((tag, i) => (
             <Badge
               key={tag}
               variant="outline"

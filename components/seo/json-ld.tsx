@@ -1,7 +1,7 @@
 import { getSocialLinks, siteConfig } from "@/config/site";
 
 export function JsonLd() {
-  const socialUrls = getSocialLinks().map((s) => s.href);
+  const socialUrls = getSocialLinks(siteConfig).map((s) => s.href);
 
   const personSchema = {
     "@context": "https://schema.org",

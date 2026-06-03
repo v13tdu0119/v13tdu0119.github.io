@@ -1,9 +1,13 @@
-import { siteConfig } from "@/config/site";
+"use client";
+
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { useSiteContent } from "@/components/providers/site-content-provider";
 import { Card } from "@/components/retroui/Card";
 import { Text } from "@/components/retroui/Text";
 
 export function Manifesto() {
+  const { content } = useSiteContent();
+
   return (
     <section
       id="manifesto"
@@ -22,7 +26,7 @@ export function Manifesto() {
         </ScrollReveal>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {siteConfig.manifesto.map((item, index) => (
+          {content.manifesto.map((item, index) => (
             <ScrollReveal
               key={item.title}
               delay={index * 80}

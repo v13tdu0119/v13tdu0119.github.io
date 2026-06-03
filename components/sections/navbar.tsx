@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getSocialLinks, siteConfig } from "@/config/site";
+import { getSocialLinks } from "@/lib/site-content-utils";
 import { SocialIcons } from "@/components/sections/social-icons";
+import { useSiteContent } from "@/components/providers/site-content-provider";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const socialLinks = getSocialLinks();
+  const { content } = useSiteContent();
+  const socialLinks = getSocialLinks(content);
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [mounted, setMounted] = useState(false);
@@ -61,11 +63,11 @@ export function Navbar() {
               scrolled ? "text-base" : "text-lg",
             )}
           >
-            {siteConfig.name}
+            {content.nickname}
           </Link>
 
           <ul className="hidden items-center gap-6 md:flex">
-            {siteConfig.nav.map((item) => (
+            {content.nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -87,7 +89,7 @@ export function Navbar() {
             </summary>
             <div className="animate-cartoon-pop-in absolute right-0 mt-2 w-48 border-2 border-black bg-white p-4 shadow-md">
               <ul className="flex flex-col gap-3">
-                {siteConfig.nav.map((item) => (
+                {content.nav.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className="block font-medium">
                       {item.label}

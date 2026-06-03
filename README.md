@@ -39,58 +39,39 @@ NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 
 URL này dùng cho canonical, Open Graph, sitemap và JSON-LD.
 
-## Deploy GitHub Pages (free)
+### Admin CMS (Firebase)
 
-Site URL: **https://douviiii.github.io**
+Trang **`/admin`** cho phép chỉnh Hero, About, Projects, v.v. qua Firestore — phù hợp static export trên GitHub Pages.
 
-### 1. Tạo repo trên GitHub
+1. Tạo project tại [Firebase Console](https://console.firebase.google.com/)
+2. Bật **Authentication** → Email/Password → tạo 1 user admin
+3. Bật **Firestore** → tạo database
+4. Deploy rules từ [`firestore.rules`](firestore.rules) — thay `REPLACE_WITH_YOUR_FIREBASE_UID` bằng UID của user admin (xem trong Authentication → Users)
+5. Copy Firebase web config vào `.env.local` (xem `.env.example`)
+6. Set `NEXT_PUBLIC_ADMIN_UID` = UID admin
+7. Chạy `npm run dev` → mở `/admin` → đăng nhập → **Save changes**
 
-- Tên repo: **`douviiii.github.io`** (đúng username GitHub)
-- Public repo
+**Production:** thêm Firebase env vào hosting provider (Vercel, v.v.) — không còn auto-deploy GitHub Pages.
 
-### 2. Push code
+Lần đầu save sẽ tạo document `portfolio/main` trên Firestore. Site public tự sync realtime (không cần rebuild).
 
-```bash
-git init
-git add .
-git commit -m "Deploy portfolio to GitHub Pages"
-git branch -M main
-git remote add origin https://github.com/douviiii/douviiii.github.io.git
-git push -u origin main
-```
+**Lưu ý SEO:** meta title/description trong HTML vẫn lấy từ `config/site.ts` lúc build. Nội dung sections trên trang chủ cập nhật ngay từ Firestore.
 
-### 3. Bật GitHub Pages
+## Deploy GitHub Pages
 
-1. Repo → **Settings** → **Pages**
-2. **Build and deployment** → Source: **GitHub Actions**
-3. Push lên `main` → workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) tự chạy
-4. Vài phút sau site live tại `https://douviiii.github.io`
+Site URL: **https://v13tdu0119.github.io**
 
-### Nếu repo tên khác (vd: `portfolio`)
+Repo: **`v13tdu0119.github.io`** (đúng username GitHub hiện tại)
 
-Set env khi build:
+1. Push lên `main` → workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) tự build & deploy
+2. Repo → **Settings** → **Pages** → Source: **GitHub Actions**
+3. Set secrets Firebase (nếu dùng admin): `NEXT_PUBLIC_FIREBASE_*`, `NEXT_PUBLIC_ADMIN_UID`
 
 ```env
-NEXT_PUBLIC_BASE_PATH=/portfolio
-NEXT_PUBLIC_SITE_URL=https://douviiii.github.io/portfolio
+NEXT_PUBLIC_SITE_URL=https://v13tdu0119.github.io
 ```
 
-## Deploy (Vercel) — tuỳ chọn
-
-1. Revert `output: "export"` trong `next.config.ts` nếu muốn SSR
-2. Import project trên [Vercel](https://vercel.com)
-3. Set `NEXT_PUBLIC_SITE_URL` = domain production
-
-## SEO trên GitHub Pages
-
-GitHub Pages **ổn cho SEO** — site export ra HTML tĩnh, Google index bình thường:
-
-- Meta tags, JSON-LD, sitemap, robots vẫn hoạt động
-- HTTPS miễn phí
-- URL `douviiii.github.io` hơi dài hơn custom domain nhưng **không bị phạt SEO**
-- Sau này mua `douviiii.dev` → trỏ CNAME về GitHub Pages hoặc chuyển Vercel
-
-## Checklist SEO trước khi go-live
+## SEO khi go-live
 
 - [ ] Cập nhật `config/site.ts` với thông tin thật
 - [ ] Set `NEXT_PUBLIC_SITE_URL` đúng domain

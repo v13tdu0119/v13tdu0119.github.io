@@ -1,5 +1,7 @@
-import { siteConfig } from "@/config/site";
+"use client";
+
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { useSiteContent } from "@/components/providers/site-content-provider";
 import { Badge } from "@/components/retroui/Badge";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
@@ -7,6 +9,8 @@ import { Text } from "@/components/retroui/Text";
 import { ExternalLinkIcon, GitHubIcon } from "@/components/sections/social-icons";
 
 export function ProjectsGrid() {
+  const { content } = useSiteContent();
+
   return (
     <section
       id="projects"
@@ -18,26 +22,26 @@ export function ProjectsGrid() {
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <Text as="h2" id="projects-heading">
-                {siteConfig.projectsIntro.title}
+                {content.projectsIntro.title}
               </Text>
               <p className="mt-2 max-w-xl leading-relaxed text-muted-foreground">
-                {siteConfig.projectsIntro.description}
+                {content.projectsIntro.description}
               </p>
               <p className="mt-3 max-w-xl text-sm font-medium">
-                {siteConfig.projectsIntro.footnote}
+                {content.projectsIntro.footnote}
               </p>
             </div>
             <Badge
               variant="outline"
               className="w-fit -rotate-2 border-2 border-black bg-accent animate-cartoon-bounce"
             >
-              {siteConfig.projects.length} projects
+              {content.projects.length} projects
             </Badge>
           </div>
         </ScrollReveal>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {siteConfig.projects.map((project, index) => (
+          {content.projects.map((project, index) => (
             <ScrollReveal
               key={project.slug}
               delay={index * 80}

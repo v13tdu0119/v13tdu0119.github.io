@@ -1,14 +1,18 @@
-import { getSocialLinks, siteConfig } from "@/config/site";
+"use client";
+
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { useSiteContent } from "@/components/providers/site-content-provider";
+import { getSocialLinks } from "@/lib/site-content-utils";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
 import { Text } from "@/components/retroui/Text";
 import { SocialIcons } from "@/components/sections/social-icons";
 
 export function SocialConnect() {
-  const socialLinks = getSocialLinks();
+  const { content } = useSiteContent();
+  const socialLinks = getSocialLinks(content);
   const primarySocial = socialLinks[0];
-  const { connect } = siteConfig;
+  const { connect } = content;
 
   return (
     <section
@@ -46,17 +50,17 @@ export function SocialConnect() {
                     />
                   }
                 >
-                  Follow @{siteConfig.username} trên {primarySocial.key}
+                  Follow Dobby trên {primarySocial.key}
                 </Button>
               )}
 
               <p className="text-sm text-muted-foreground">
                 {connect.emailNote}{" "}
                 <a
-                  href={`mailto:${siteConfig.author.email}`}
+                  href={`mailto:${content.author.email}`}
                   className="font-medium text-foreground underline underline-offset-2"
                 >
-                  {siteConfig.author.email}
+                  {content.author.email}
                 </a>
               </p>
             </Card.Content>

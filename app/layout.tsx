@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Raleway, SN_Pro } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/seo/json-ld";
+import { AppProviders } from "@/components/providers/app-providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -87,8 +88,10 @@ export default function RootLayout({
       className={`${inter.variable} ${raleway.variable} ${snPro.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
-        <JsonLd />
-        {children}
+        <AppProviders>
+          <JsonLd />
+          {children}
+        </AppProviders>
       </body>
     </html>
   );

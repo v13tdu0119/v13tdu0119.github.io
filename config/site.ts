@@ -1,34 +1,20 @@
-export type SocialKey =
-  | "github"
-  | "linkedin"
-  | "twitter"
-  | "instagram"
-  | "facebook"
-  | "zalo";
+import type { Project, SiteContent, SocialKey } from "@/types/site-content";
 
-export type Project = {
-  slug: string;
-  title: string;
-  description: string;
-  tags: string[];
-  href?: string;
-  github?: string;
-  featured?: boolean;
-};
+export type { Project, SiteContent, SocialKey };
 
 export const siteConfig = {
-  name: "Viet Duong",
+  name: "Việt Dương",
   nickname: "Dobby",
-  username: "douviiii",
+  username: "Dobby",
   tagline: "🍕 1% better than 0% — From Vietnam with LOVE 🌈",
   description:
-    "Portfolio của Viet Duong (douviiii / Dobby) — Mobile & full-stack developer tại TP.HCM. Android, Kotlin, React Native, Spring Boot. Đang mở cửa nhận cơ hội — please hire me 🥑",
+    "Portfolio của Dobby (Việt Dương) — Mobile & full-stack developer tại TP.HCM. Android, Kotlin, React Native, Spring Boot. Đang mở cửa nhận cơ hội — please hire me 🥑",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "vi_VN",
   location: "Ho Chi Minh City, Vietnam",
   keywords: [
-    "Viet Duong",
-    "douviiii",
+    "Việt Dương",
+    "Dobby",
     "Dobby developer",
     "portfolio",
     "Android developer",
@@ -40,16 +26,16 @@ export const siteConfig = {
     "hire mobile developer",
   ],
   author: {
-    name: "Viet Duong",
+    name: "Việt Dương",
     email: "code.with.dobby@gmail.com",
-    jobTitle: "Mobile & Software Developer",
+    jobTitle: "Android Developer",
   },
   hero: {
-    badge: "douviiii × Dobby home 🏠",
+    badge: "Dobby home 🏠",
     headline: "Code như Dobby —",
     headlineHighlight: "cần mẫn, có vibe",
     subheadline:
-      "Mình là Viet Duong, bạn bè gọi là Dobby. Developer Gen Z ngồi ở Sài Gòn, viết app Android, đôi khi nhảy sang React Native, đôi khi vọc Spring Boot. Không chase perfection — chase 1% mỗi ngày. ༼ つ ◕_◕ ༽つ",
+      "Mình là Việt Dương, bạn bè gọi là Dobby. Developer Gen Z ngồi ở Sài Gòn, viết app Android, đôi khi nhảy sang React Native, đôi khi vọc Spring Boot. Không chase perfection — chase 1% mỗi ngày. ༼ つ ◕_◕ ༽つ",
     ctaPrimary: "Xem projects của Dobby",
     ctaSecondary: "Hire me / Connect",
   },
@@ -65,6 +51,81 @@ export const siteConfig = {
     "🎮 Từng build game Caro multiplayer qua Bluetooth — hồi đó flex với bạn bè",
     "📚 Viết Spring Boot learning docs tiếng Việt cho ae mới vào ngành",
     "🌈 From Vietnam with LOVE — pastel brutalism là aesthetic, không phải phase",
+  ],
+  experienceIntro: {
+    title: "Work experience",
+    description:
+      "Hành trình Android dev thật — từ banking compliance đến logistics real-time. Không phải buzzword slide, là những gì mình đã ship.",
+  },
+  workExperience: [
+    {
+      id: "staffun",
+      company: "Staffun",
+      role: "Android Developer",
+      location: "Ho Chi Minh City",
+      period: "07/2025 — 03/2026",
+      projects: [
+        {
+          name: "LINKON — Transportation",
+          highlights: [
+            "Rebuild app với MVVM, Modular architecture & Dagger-Hilt; Kotlin Flow/Coroutines + GitHub Actions CI/CD — giảm ~40% manual release.",
+            "Google Maps SDK + background location tracking cho 200+ tài xế/ngày; tối ưu JPush/Umeng cho notification trên mạng yếu.",
+            "Hybrid login: Biometric API + JWT, mã hóa Refresh Token bằng Android Keystore (AES).",
+            "Custom UI cho low-end devices; Firebase Crashlytics + Remote Config rollout feature không cần update app.",
+            "Dùng Gemini & Cursor cho prototyping, codegen & debug — tăng tốc delivery hàng ngày.",
+          ],
+        },
+        {
+          name: "Sandtoner — E-commerce",
+          highlights: [
+            "End-to-end publish & maintain app trên Google Play — signing, config, policy compliance.",
+            "Monitor production với Firebase Crashlytics, fix edge-case crashes, cải thiện reliability.",
+          ],
+          link: "https://play.google.com/store/apps/details?id=com.sandtoner.live.seo.app",
+        },
+      ],
+    },
+    {
+      id: "nab-vietnam",
+      company: "NAB Vietnam",
+      role: "Android Developer",
+      location: "Ho Chi Minh City",
+      period: "08/2022 — 12/2024",
+      projects: [
+        {
+          name: "NAB Mobile Banking",
+          highlights: [
+            "Clean Architecture + MVVM modular; data layer Kotlin Flow cho banking operations scale.",
+            "Migrate 30+ feature flags sang LaunchDarkly; Geofencing + FCM trigger notification theo vị trí.",
+            "Security: Snyk scan vulnerabilities; Android API 33–35 edge-to-edge UI & screen recording detection.",
+            "Jenkins CI/CD, Unit/UI tests + JaCoCo coverage; optimize media WebP giảm APK size.",
+          ],
+        },
+      ],
+    },
+    {
+      id: "blue-otter",
+      company: "Blue Otter Vietnam",
+      role: "Intern Front-End Developer",
+      location: "Da Nang City",
+      period: "06/2021 — 08/2021",
+      highlights: [
+        "Web app ReactJS + Firebase Firestore — real-time CRUD, image upload, auth login/register.",
+        "Firebase Storage cho media; deploy end-to-end lên production.",
+      ],
+    },
+    {
+      id: "pnv-mentor",
+      company: "Passerelles Numériques Vietnam",
+      role: "Mentor & Trainer",
+      location: "Da Nang, Vietnam",
+      period: "12/2024 — Now",
+      type: "leadership",
+      highlights: [
+        "Mentor startup team sinh viên — technical guidance & planning, team đạt giải Nhất cuộc thi khởi nghiệp.",
+        "Technical trainer cho sinh viên năm 2: Agile/Scrum, IT Project Management, OOP.",
+      ],
+    },
   ],
   manifesto: [
     {
@@ -95,7 +156,7 @@ export const siteConfig = {
     description:
       "Cần mobile dev? Muốn collab side project? Hay chỉ muốn follow hành trình 1% better của một Gen Z dev ở Sài Gòn? Cứ ping — mình rep nhanh hơn push notification.",
     emailNote: "Email chính thức của Dobby:",
-    hireLine: "Status: 🟢 Open to opportunities — internship, junior, freelance đều talk được",
+    hireLine: "Status: 🟢 Open to opportunities — Junior+ & Middle Android Dev",
   },
   stickyBubble: {
     greeting: "Hey! Dobby đây 👋",
@@ -115,16 +176,18 @@ export const siteConfig = {
     "Mobile Dev",
     "Kotlin",
     "Gen Z",
-    "Open to work",
+    "Junior+ Android",
   ],
   nav: [
     { label: "Giới thiệu", href: "#about" },
+    { label: "Experience", href: "#experience" },
     { label: "Manifesto", href: "#manifesto" },
     { label: "Projects", href: "#projects" },
     { label: "Kết nối", href: "#connect" },
   ],
   social: {
     github: "https://github.com/douviiii",
+    linkedin: "https://www.linkedin.com/in/vietduongg/",
     facebook: "https://www.facebook.com/duoviiii/",
     instagram: "https://www.instagram.com/duoviiii/",
   } satisfies Partial<Record<SocialKey, string>>,
@@ -202,10 +265,8 @@ export const siteConfig = {
       featured: false,
     },
   ] as Project[],
-} as const;
+} satisfies SiteContent;
 
-export function getSocialLinks() {
-  return Object.entries(siteConfig.social)
-    .filter((entry): entry is [SocialKey, string] => Boolean(entry[1]))
-    .map(([key, href]) => ({ key, href }));
-}
+export const defaultSiteContent: SiteContent = siteConfig;
+
+export { getSocialLinks } from "@/lib/site-content-utils";
