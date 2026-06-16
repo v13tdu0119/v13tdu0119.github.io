@@ -45,6 +45,35 @@ export type ImpactMetric = {
   value: string;
 };
 
+export type MagazineNow = {
+  label: string;
+  value: string;
+};
+
+export type MagazineTimeline = {
+  year: string;
+  title: string;
+  detail: string;
+};
+
+export type MagazinePhilosophy = {
+  code: string;
+  tag: string;
+  title: string;
+  body: string;
+};
+
+export type MagazineContent = {
+  volume: string;
+  roleLine: string;
+  now: MagazineNow[];
+  disciplines: string[];
+  timeline: MagazineTimeline[];
+  philosophyIntro: string;
+  philosophyStudies: MagazinePhilosophy[];
+  toolkitIntro: string;
+};
+
 export type WorkExperienceProject = {
   name: string;
   highlights: string[];
@@ -115,6 +144,7 @@ export type SiteContent = {
   heroTags: string[];
   heroStats: HeroStat[];
   impactMetrics: ImpactMetric[];
+  magazine: MagazineContent;
   featuredCaseStudy: FeaturedCaseStudy;
   nav: NavItem[];
   social: Partial<Record<SocialKey, string>>;

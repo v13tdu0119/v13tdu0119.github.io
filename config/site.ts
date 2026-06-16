@@ -62,6 +62,49 @@ export const siteConfig = {
     { value: "40%", label: "Less manual release effort" },
     { value: "35+", label: "Public GitHub repos" },
   ],
+  magazine: {
+    volume: "Vol. 01 · '26",
+    roleLine: "Android developer",
+    now: [
+      { label: "Building", value: "KMM Movies Demo · Compose + offline cache" },
+      { label: "Reading", value: "Clean Architecture · Robert C. Martin" },
+      { label: "Last shipped", value: "Sandtoner · Google Play release" },
+    ],
+    disciplines: [
+      "Production Android",
+      "Kotlin · Jetpack Compose",
+      "MVVM · Clean Architecture",
+      "CI/CD · GitHub Actions",
+      "Banking & logistics scale",
+      "React Native · Spring Boot",
+      "Release ownership",
+      "Mentorship · Agile delivery",
+    ],
+    timeline: [
+      { year: "'21", title: "Blue Otter internship · Da Nang", detail: "First production web app with React + Firebase." },
+      { year: "'22", title: "NAB Vietnam · Mobile banking", detail: "Modular Clean Architecture across 30+ feature flags." },
+      { year: "'25", title: "Staffun · LINKON & Sandtoner", detail: "Logistics rebuild + Play Store e-commerce ship." },
+      { year: "'24", title: "PNV mentor · Startup competition win", detail: "Training juniors on Agile, OOP, and delivery." },
+      { year: "'26", title: "Open · Junior+ & Middle Android roles", detail: "HCMC-based, remote-friendly, reply within 24h." },
+    ],
+    philosophyIntro:
+      "Two ideas I return to when designing Android systems — keep the architecture clear enough to scale, and ship often enough to learn.",
+    philosophyStudies: [
+      {
+        code: "A.01",
+        tag: "Architecture · HCMC",
+        title: "Above the Module Graph",
+        body: "Keep the vision large enough to chase, but practical enough to compile. Modular boundaries should match how teams actually ship.",
+      },
+      {
+        code: "A.02",
+        tag: "Shipping · 35+ repos",
+        title: "Progress in the Mirror",
+        body: "Each release reflects the last decision — CI, tests, and crash reports turn ambition into something users can trust.",
+      },
+    ],
+    toolkitIntro: "Six disciplines I carry from first sketch to shipped APK.",
+  },
   featuredCaseStudy: {
     badge: "Production · Shipped",
     title: "LINKON & Sandtoner",

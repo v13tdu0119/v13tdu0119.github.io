@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html
       lang={siteConfig.locale.split("_")[0]}
-      className={`${inter.variable} ${raleway.variable} ${snPro.variable} h-full bg-tid-bg text-tid-cream`}
+      className={`${inter.variable} ${raleway.variable} ${snPro.variable} h-full`}
     >
       <body className="min-h-full antialiased">
         <AppProviders>

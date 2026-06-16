@@ -27,6 +27,9 @@ export function mergeSiteContent(
     heroTags: partial.heroTags ?? base.heroTags,
     heroStats: partial.heroStats ?? base.heroStats,
     impactMetrics: partial.impactMetrics ?? base.impactMetrics,
+    magazine: partial.magazine
+      ? { ...base.magazine, ...partial.magazine }
+      : base.magazine,
     featuredCaseStudy: partial.featuredCaseStudy
       ? { ...base.featuredCaseStudy, ...partial.featuredCaseStudy }
       : base.featuredCaseStudy,
