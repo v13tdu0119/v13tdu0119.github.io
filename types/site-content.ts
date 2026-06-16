@@ -13,17 +13,36 @@ export type Project = {
   tags: string[];
   href?: string;
   github?: string;
+  playStore?: string;
   featured?: boolean;
 };
 
-export type ManifestoItem = {
+export type FeaturedCaseStudy = {
+  badge: string;
   title: string;
-  body: string;
+  company: string;
+  period: string;
+  summary: string;
+  problem: string;
+  highlights: string[];
+  stack: string[];
+  playStoreUrl?: string;
+  playStoreLabel?: string;
 };
 
 export type NavItem = {
   label: string;
   href: string;
+};
+
+export type HeroStat = {
+  label: string;
+  value: string;
+};
+
+export type ImpactMetric = {
+  label: string;
+  value: string;
 };
 
 export type WorkExperienceProject = {
@@ -75,7 +94,6 @@ export type SiteContent = {
     description: string;
   };
   workExperience: WorkExperience[];
-  manifesto: ManifestoItem[];
   projectsIntro: {
     title: string;
     description: string;
@@ -95,6 +113,9 @@ export type SiteContent = {
   };
   techStack: string[];
   heroTags: string[];
+  heroStats: HeroStat[];
+  impactMetrics: ImpactMetric[];
+  featuredCaseStudy: FeaturedCaseStudy;
   nav: NavItem[];
   social: Partial<Record<SocialKey, string>>;
   projects: Project[];

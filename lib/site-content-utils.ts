@@ -23,9 +23,13 @@ export function mergeSiteContent(
     funFacts: partial.funFacts ?? base.funFacts,
     workExperience: partial.workExperience ?? base.workExperience,
     experienceIntro: { ...base.experienceIntro, ...partial.experienceIntro },
-    manifesto: partial.manifesto ?? base.manifesto,
     techStack: partial.techStack ?? base.techStack,
     heroTags: partial.heroTags ?? base.heroTags,
+    heroStats: partial.heroStats ?? base.heroStats,
+    impactMetrics: partial.impactMetrics ?? base.impactMetrics,
+    featuredCaseStudy: partial.featuredCaseStudy
+      ? { ...base.featuredCaseStudy, ...partial.featuredCaseStudy }
+      : base.featuredCaseStudy,
     nav: partial.nav ?? base.nav,
     projects: partial.projects ?? base.projects,
   };

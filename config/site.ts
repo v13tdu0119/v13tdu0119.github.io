@@ -6,11 +6,11 @@ export const siteConfig = {
   name: "Việt Dương",
   nickname: "Dobby",
   username: "Dobby",
-  tagline: "🍕 1% better than 0% — From Vietnam with LOVE 🌈",
+  tagline: "1% better than 0% — Android developer from Vietnam",
   description:
-    "Portfolio của Dobby (Việt Dương) — Mobile & full-stack developer tại TP.HCM. Android, Kotlin, React Native, Spring Boot. Đang mở cửa nhận cơ hội — please hire me 🥑",
+    "Portfolio of Việt Dương (Dobby) — Android developer in Ho Chi Minh City. Kotlin, Jetpack Compose, banking & logistics apps. Open to Junior+ and Middle Android roles.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  locale: "vi_VN",
+  locale: "en_US",
   location: "Ho Chi Minh City, Vietnam",
   keywords: [
     "Việt Dương",
@@ -31,31 +31,60 @@ export const siteConfig = {
     jobTitle: "Android Developer",
   },
   hero: {
-    badge: "Dobby home 🏠",
-    headline: "Code như Dobby —",
-    headlineHighlight: "cần mẫn, có vibe",
+    badge: "Dobby · Android Developer",
+    headline: "Building Android apps that",
+    headlineHighlight: "ship and scale",
     subheadline:
-      "Mình là Việt Dương, bạn bè gọi là Dobby. Developer Gen Z ngồi ở Sài Gòn, viết app Android, đôi khi nhảy sang React Native, đôi khi vọc Spring Boot. Không chase perfection — chase 1% mỗi ngày. ༼ つ ◕_◕ ༽つ",
-    ctaPrimary: "Xem projects của Dobby",
-    ctaSecondary: "Hire me / Connect",
+      "I'm Việt Dương — friends call me Dobby. I build production Android apps in Ho Chi Minh City, from mobile banking to real-time logistics. I care about clean architecture, reliable releases, and steady 1% improvement every day.",
+    ctaPrimary: "View projects",
+    ctaSecondary: "Get in touch",
   },
-  bio: "Developer Gen Z tại TP.HCM — đam mê biến ý tưởng thành app thật trên điện thoại. Từ ML scan object, app đọc manga, game cờ caro Bluetooth, đến docs Spring Boot tiếng Việt — mình build vì thích, ship vì không ship thì buồn.",
+  bio: "Android developer based in Ho Chi Minh City with hands-on experience in banking, e-commerce, and transportation products. I turn product requirements into maintainable Kotlin code — MVVM, modular architecture, CI/CD, and security-conscious implementations.",
   bioExtra:
-    "GitHub bio của mình từng ghi \"Please hire me\" — không phải meme, là thật đó 🥑. Mình học nhanh, commit thường xuyên, và tin rằng portfolio nói thay resume. Nếu bạn cần người code mobile có personality, inbox là Dobby rep ngay.",
+    "I learn fast, commit often, and treat my GitHub as a public track record. If you need an Android engineer who communicates clearly and delivers with ownership, I'd love to talk.",
   stackIntro:
-    "Mobile-first trong tim, backend trong pipeline. Jetpack Compose là crush mới, Kotlin là comfort zone, React Native là cánh cửa cross-platform, Spring Boot là backup plan kiểu \"backend cũng ổn mà\".",
+    "Mobile-first by default. Kotlin and Jetpack Compose are my core toolkit; React Native and Spring Boot extend my reach when the product calls for it.",
   funFacts: [
-    "🥡 Email: code.with.dobby@gmail.com — đúng nghĩa code with Dobby",
-    "🍕 Triết lý sống: 1% better > 0% — áp dụng cả gym lẫn git commit",
-    "📱 34+ repos trên GitHub — side project là hobby, không phải nghĩa vụ",
-    "🎮 Từng build game Caro multiplayer qua Bluetooth — hồi đó flex với bạn bè",
-    "📚 Viết Spring Boot learning docs tiếng Việt cho ae mới vào ngành",
-    "🌈 From Vietnam with LOVE — pastel brutalism là aesthetic, không phải phase",
+    "Email: code.with.dobby@gmail.com",
+    "Philosophy: 1% better > 0% — in code and in life",
+    "35+ public repos — side projects keep me sharp",
+    "Built a Bluetooth multiplayer Caro game before multiplayer was cool",
+    "Author of Vietnamese Spring Boot learning resources for juniors",
+    "From Vietnam — proud of it, professional about it",
   ],
+  heroStats: [
+    { label: "Android focus", value: "3+ yrs" },
+    { label: "GitHub repos", value: "35+" },
+    { label: "Status", value: "Open to work" },
+  ],
+  impactMetrics: [
+    { value: "200+", label: "Daily drivers (LINKON)" },
+    { value: "40%", label: "Less manual release effort" },
+    { value: "35+", label: "Public GitHub repos" },
+  ],
+  featuredCaseStudy: {
+    badge: "Production · Shipped",
+    title: "LINKON & Sandtoner",
+    company: "Staffun",
+    period: "07/2025 — 03/2026",
+    summary:
+      "Rebuilt a logistics driver app for 200+ daily users and shipped an e-commerce app to Google Play — MVVM, modular architecture, and CI/CD from the ground up.",
+    problem:
+      "Two Android products under active development: a transportation app needing scalable architecture and reliable location tracking, and an e-commerce app requiring Play Store compliance and production stability.",
+    highlights: [
+      "MVVM + Dagger-Hilt modular rebuild; GitHub Actions CI/CD cut manual release effort by ~40%",
+      "Google Maps + background location for 200+ drivers/day; push optimized for weak networks",
+      "Hybrid biometric + JWT auth with Refresh Tokens encrypted via Android Keystore",
+      "Owned Sandtoner Play Store lifecycle — signing, policy compliance, Crashlytics-driven fixes",
+    ],
+    stack: ["Kotlin", "MVVM", "Dagger Hilt", "Google Maps", "Firebase", "GitHub Actions"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.sandtoner.live.seo.app",
+    playStoreLabel: "Sandtoner on Google Play",
+  },
   experienceIntro: {
-    title: "Work experience",
+    title: "Experience",
     description:
-      "Hành trình Android dev thật — từ banking compliance đến logistics real-time. Không phải buzzword slide, là những gì mình đã ship.",
+      "Production Android work across banking, logistics, and e-commerce — not tutorial projects. Highlights below focus on impact and ownership.",
   },
   workExperience: [
     {
@@ -68,18 +97,16 @@ export const siteConfig = {
         {
           name: "LINKON — Transportation",
           highlights: [
-            "Rebuild app với MVVM, Modular architecture & Dagger-Hilt; Kotlin Flow/Coroutines + GitHub Actions CI/CD — giảm ~40% manual release.",
-            "Google Maps SDK + background location tracking cho 200+ tài xế/ngày; tối ưu JPush/Umeng cho notification trên mạng yếu.",
-            "Hybrid login: Biometric API + JWT, mã hóa Refresh Token bằng Android Keystore (AES).",
-            "Custom UI cho low-end devices; Firebase Crashlytics + Remote Config rollout feature không cần update app.",
-            "Dùng Gemini & Cursor cho prototyping, codegen & debug — tăng tốc delivery hàng ngày.",
+            "Rebuilt the app with MVVM, modular architecture, and Dagger-Hilt; CI/CD via GitHub Actions cut manual release effort by ~40%.",
+            "Integrated Google Maps and background location tracking for 200+ daily drivers; optimized push delivery on weak networks.",
+            "Shipped secure hybrid login (Biometric API + JWT) with Refresh Tokens encrypted via Android Keystore.",
           ],
         },
         {
           name: "Sandtoner — E-commerce",
           highlights: [
-            "End-to-end publish & maintain app trên Google Play — signing, config, policy compliance.",
-            "Monitor production với Firebase Crashlytics, fix edge-case crashes, cải thiện reliability.",
+            "Owned Google Play release lifecycle: signing, configuration, and policy compliance.",
+            "Improved production stability using Firebase Crashlytics and targeted crash fixes.",
           ],
           link: "https://play.google.com/store/apps/details?id=com.sandtoner.live.seo.app",
         },
@@ -95,10 +122,9 @@ export const siteConfig = {
         {
           name: "NAB Mobile Banking",
           highlights: [
-            "Clean Architecture + MVVM modular; data layer Kotlin Flow cho banking operations scale.",
-            "Migrate 30+ feature flags sang LaunchDarkly; Geofencing + FCM trigger notification theo vị trí.",
-            "Security: Snyk scan vulnerabilities; Android API 33–35 edge-to-edge UI & screen recording detection.",
-            "Jenkins CI/CD, Unit/UI tests + JaCoCo coverage; optimize media WebP giảm APK size.",
+            "Modular Clean Architecture + MVVM with Kotlin Flow for scalable banking features.",
+            "Migrated 30+ feature flags to LaunchDarkly; built geofencing alerts with Firebase FCM.",
+            "Strengthened security (Snyk, screen-recording detection) and CI quality gates (Jenkins, JaCoCo).",
           ],
         },
       ],
@@ -110,8 +136,8 @@ export const siteConfig = {
       location: "Da Nang City",
       period: "06/2021 — 08/2021",
       highlights: [
-        "Web app ReactJS + Firebase Firestore — real-time CRUD, image upload, auth login/register.",
-        "Firebase Storage cho media; deploy end-to-end lên production.",
+        "Built a React + Firebase web app with real-time CRUD, media upload, and authentication.",
+        "Deployed end-to-end to production using Firebase as BaaS.",
       ],
     },
     {
@@ -122,47 +148,29 @@ export const siteConfig = {
       period: "12/2024 — Now",
       type: "leadership",
       highlights: [
-        "Mentor startup team sinh viên — technical guidance & planning, team đạt giải Nhất cuộc thi khởi nghiệp.",
-        "Technical trainer cho sinh viên năm 2: Agile/Scrum, IT Project Management, OOP.",
+        "Mentored a student startup team to first place in a university entrepreneurship competition.",
+        "Delivered technical training on Agile/Scrum, project management, and OOP for second-year students.",
       ],
     },
   ],
-  manifesto: [
-    {
-      title: "Ship > perfect",
-      body: "App chạy được hôm nay tốt hơn app hoàn hảo mãi không release.",
-    },
-    {
-      title: "1% mỗi ngày",
-      body: "Không cần overnight success. Cần commit đều và sleep đủ (cố gắng).",
-    },
-    {
-      title: "UI có personality",
-      body: "Gen Z không xài template xám xịt. Web phải có màu, có chuyện kể.",
-    },
-    {
-      title: "Open source mindset",
-      body: "Code public, học cùng nhau. Repo là CV, commit history là timeline.",
-    },
-  ],
   projectsIntro: {
-    title: "Projects Dobby đã build",
+    title: "Selected projects",
     description:
-      "Không phải tutorial follow-along — đây là những thứ mình thật sự ngồi debug lúc 2h sáng. Android chiếm đa số, có ML, có game, có cả backend docs. Click GitHub để xem commit history — đó là phần honest nhất.",
-    footnote: "⭐ Featured = project mình tự hào nhất. Còn lại vẫn ship, vẫn học.",
+      "Side projects and shipped work that reflect how I code — Android-heavy, with ML, games, and docs mixed in. Source code and commit history on GitHub.",
+    footnote: "Featured projects are the ones I'm most proud of. Others are still part of my learning journey.",
   },
   connect: {
-    title: "Vào Dobby's DM zone",
+    title: "Let's connect",
     description:
-      "Cần mobile dev? Muốn collab side project? Hay chỉ muốn follow hành trình 1% better của một Gen Z dev ở Sài Gòn? Cứ ping — mình rep nhanh hơn push notification.",
-    emailNote: "Email chính thức của Dobby:",
-    hireLine: "Status: 🟢 Open to opportunities — Junior+ & Middle Android Dev",
+      "Looking for a Junior+ or Middle Android developer? Open to full-time roles, contracts, and serious collaborations. I reply within 24 hours.",
+    emailNote: "Best way to reach me:",
+    hireLine: "Open to opportunities — Junior+ & Middle Android Developer",
   },
   stickyBubble: {
-    greeting: "Hey! Dobby đây 👋",
-    message: "Cần dev mobile? Muốn collab? Cứ ping — mình rep nhanh lắm!",
-    ctaEmail: "Gửi email",
-    ctaFacebook: "Nhắn Facebook",
+    greeting: "Hey, Dobby here",
+    message: "Need an Android dev? Happy to chat about roles or projects.",
+    ctaEmail: "Email me",
+    ctaFacebook: "Message on Facebook",
   },
   techStack: [
     "Kotlin",
@@ -173,17 +181,17 @@ export const siteConfig = {
     "TypeScript",
   ],
   heroTags: [
-    "Mobile Dev",
+    "Android",
     "Kotlin",
-    "Gen Z",
-    "Junior+ Android",
+    "Jetpack Compose",
+    "Open to work",
   ],
   nav: [
-    { label: "Giới thiệu", href: "#about" },
+    { label: "Home", href: "#top" },
+    { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
-    { label: "Manifesto", href: "#manifesto" },
     { label: "Projects", href: "#projects" },
-    { label: "Kết nối", href: "#connect" },
+    { label: "Contact", href: "#connect" },
   ],
   social: {
     github: "https://github.com/douviiii",
@@ -196,7 +204,7 @@ export const siteConfig = {
       slug: "ml-android-scan-object",
       title: "ML Android Scan Object",
       description:
-        "App quét vật thể real-time bằng ML — C++ native layer gặp Android UI. Project chứng minh Dobby không chỉ CRUD, còn đụng computer vision.",
+        "Real-time object detection on Android — native C++ layer paired with a Kotlin UI. Demonstrates computer vision beyond typical CRUD apps.",
       tags: ["C++", "Android", "ML", "Computer Vision"],
       github: "https://github.com/douviiii/ML-Android-Scan-Object",
       featured: true,
@@ -205,7 +213,7 @@ export const siteConfig = {
       slug: "android-kotlin-my-manga",
       title: "My Manga",
       description:
-        "App đọc manga cho weebs (và dev) — Kotlin/Java, scroll mượt, UI không làm đau mắt. Vì đôi khi relax = đọc truyện + fix bug.",
+        "Manga reader built with Kotlin and Java — smooth scrolling and a clean reading experience for daily use.",
       tags: ["Kotlin", "Java", "Android"],
       github: "https://github.com/douviiii/Android-Kotlin-My-Manga",
       featured: true,
@@ -214,7 +222,7 @@ export const siteConfig = {
       slug: "kmm-movies-demo",
       title: "KMM Movies Demo",
       description:
-        "App phim TMDB — Compose đẹp, KMM share logic sang iOS, offline cache khi mạng lag. MVVM + Room + Retrofit combo kinh điển nhưng làm cho đúng.",
+        "TMDB movie app with Jetpack Compose UI, Kotlin Multiplatform shared logic, and offline caching — MVVM, Room, and Retrofit done right.",
       tags: ["Kotlin", "KMM", "Compose", "MVVM", "Room"],
       github: "https://github.com/douviiii/KMM-Movies-Demo",
       featured: true,
@@ -223,7 +231,7 @@ export const siteConfig = {
       slug: "findway",
       title: "FindWay",
       description:
-        "Bản đồ + dẫn đường cho người hay lạc (như mình). Jetpack Compose, Google Maps SDK, MVVM — search địa điểm, chọn, navigate realtime.",
+        "Maps and navigation app for finding places and routes — Jetpack Compose, Google Maps SDK, and MVVM with real-time search and directions.",
       tags: ["Jetpack Compose", "Google Maps", "MVVM", "Android"],
       github: "https://github.com/douviiii/findway",
       featured: false,
@@ -232,7 +240,7 @@ export const siteConfig = {
       slug: "android-caro-multiplayer",
       title: "Caro Multiplayer",
       description:
-        "Cờ caro nostalgia — đánh AI khi không ai rảnh, Bluetooth multiplayer khi có hội bạn. Game đơn giản nhưng flex skill networking.",
+        "Classic Caro (Gomoku) with AI opponent and Bluetooth multiplayer — a small game that exercises networking and state management.",
       tags: ["Kotlin", "Android", "Bluetooth", "Game"],
       github: "https://github.com/douviiii/android-caro-multiplayer",
       featured: false,
@@ -241,7 +249,7 @@ export const siteConfig = {
       slug: "android-kotlin-soundspace",
       title: "SoundSpace",
       description:
-        "Không gian âm thanh trên Android — explore audio, UI Kotlin sạch. Side project kiểu \"hôm nay thử làm app nhạc xem sao\".",
+        "Android audio exploration app with a polished Kotlin UI — a side project born from curiosity about media playback on mobile.",
       tags: ["Kotlin", "Android", "Audio"],
       github: "https://github.com/douviiii/android-kotlin-soundspace",
       featured: true,
@@ -250,7 +258,7 @@ export const siteConfig = {
       slug: "spring-boot-learning",
       title: "Spring Boot Learning",
       description:
-        "Repo tài liệu tiếng Việt về Spring Boot & Spring Cloud — code mẫu + hình minh họa. Dobby share kiến thức cho community, không gatekeep.",
+        "Vietnamese Spring Boot and Spring Cloud learning resources — sample code and diagrams shared openly with the developer community.",
       tags: ["Spring Boot", "Spring Cloud", "Java", "Backend"],
       github: "https://github.com/douviiii/spring-boot-learning",
       featured: false,
@@ -259,7 +267,7 @@ export const siteConfig = {
       slug: "specialization-react-native",
       title: "React Native Specialization",
       description:
-        "Module React Native từ specialization course — navigation, components, patterns. Bước đầu nhảy khỏi native-only comfort zone.",
+        "React Native modules from a mobile specialization course — navigation, components, and cross-platform patterns beyond native-only work.",
       tags: ["React Native", "JavaScript", "Mobile"],
       github: "https://github.com/douviiii/Specialization-Module-React-Native",
       featured: false,

@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/apple-icon.png", type: "image/png" }],
-    shortcut: ["/icon.png"],
+    icon: [{ url: "/avatar.jpg", type: "image/jpeg" }],
+    apple: [{ url: "/avatar.jpg", type: "image/jpeg" }],
+    shortcut: ["/avatar.jpg"],
   },
   openGraph: {
     type: "website",
@@ -85,12 +85,12 @@ export default function RootLayout({
   return (
     <html
       lang={siteConfig.locale.split("_")[0]}
-      className={`${inter.variable} ${raleway.variable} ${snPro.variable} h-full`}
+      className={`${inter.variable} ${raleway.variable} ${snPro.variable} h-full bg-tid-bg text-tid-cream`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full antialiased">
         <AppProviders>
           <JsonLd />
-          {children}
+          <div className="min-h-full">{children}</div>
         </AppProviders>
       </body>
     </html>

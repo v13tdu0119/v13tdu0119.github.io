@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 const fieldClassName =
-  "w-full border-2 border-black bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary";
+  "w-full rounded-md border border-white/20 bg-[#282828] px-3 py-2 text-sm text-white outline-none focus:ring-2 focus:ring-spotify-green";
 
 export function AdminField({
   label,
@@ -50,8 +50,8 @@ export function AdminSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border-2 border-black bg-white brutal-shadow">
-      <div className="border-b-2 border-black bg-secondary px-4 py-3">
+    <section className="rounded-lg border border-white/10 bg-[#181818] shadow-lg">
+      <div className="border-b border-white/10 bg-[#282828] px-4 py-3">
         <h2 className="font-head text-lg font-bold">{title}</h2>
         {description && (
           <p className="mt-1 text-sm text-muted-foreground">{description}</p>

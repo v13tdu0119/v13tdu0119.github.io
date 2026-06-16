@@ -20,7 +20,6 @@ const tabs = [
   { id: "hero", label: "Hero" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
-  { id: "manifesto", label: "Manifesto" },
   { id: "projects", label: "Projects" },
   { id: "connect", label: "Connect" },
   { id: "social", label: "Social" },
@@ -395,52 +394,6 @@ export function AdminDashboard() {
             }
           >
             Add experience
-          </Button>
-        </AdminSection>
-      )}
-
-      {activeTab === "manifesto" && (
-        <AdminSection title="Manifesto">
-          {draft.manifesto.map((item, index) => (
-            <div
-              key={`manifesto-${index}`}
-              className="grid gap-3 border-2 border-black bg-muted/40 p-4"
-            >
-              <AdminField
-                label={`Item ${index + 1} title`}
-                value={item.title}
-                onChange={(e) =>
-                  updateDraft((c) => {
-                    const manifesto = [...c.manifesto];
-                    manifesto[index] = { ...manifesto[index], title: e.target.value };
-                    return { ...c, manifesto };
-                  })
-                }
-              />
-              <AdminTextarea
-                label="Body"
-                value={item.body}
-                onChange={(e) =>
-                  updateDraft((c) => {
-                    const manifesto = [...c.manifesto];
-                    manifesto[index] = { ...manifesto[index], body: e.target.value };
-                    return { ...c, manifesto };
-                  })
-                }
-              />
-            </div>
-          ))}
-          <Button
-            variant="outline"
-            className="bg-white"
-            onClick={() =>
-              updateDraft((c) => ({
-                ...c,
-                manifesto: [...c.manifesto, { title: "New rule", body: "" }],
-              }))
-            }
-          >
-            Add manifesto item
           </Button>
         </AdminSection>
       )}
