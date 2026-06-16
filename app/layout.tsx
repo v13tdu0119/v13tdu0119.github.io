@@ -27,8 +27,8 @@ const snPro = SN_Pro({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
+    default: "v13tdu0119",
+    template: "%s | v13tdu0119",
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
@@ -49,31 +49,31 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   icons: {
-    icon: [{ url: "/avatar.jpg", type: "image/jpeg" }],
-    apple: [{ url: "/avatar.jpg", type: "image/jpeg" }],
-    shortcut: ["/avatar.jpg"],
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png", type: "image/png" }],
+    shortcut: ["/icon.png"],
   },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
     url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    siteName: "v13tdu0119",
+    title: "v13tdu0119",
     description: siteConfig.description,
     images: [
       {
-        url: "/og.svg",
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} portfolio`,
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "v13tdu0119",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    card: "summary",
+    title: "v13tdu0119",
     description: siteConfig.description,
-    images: ["/og.svg"],
+    images: ["/icon.png"],
   },
 };
 

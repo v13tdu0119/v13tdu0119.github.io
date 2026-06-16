@@ -33,7 +33,7 @@ export function MagPhilosophySection() {
         </div>
       </MagSection>
 
-      <MagStatsMarquee metrics={content.impactMetrics} />
+      <MagStatsMarquee metrics={content.heroStats} />
     </>
   );
 }

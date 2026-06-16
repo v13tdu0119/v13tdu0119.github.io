@@ -8,7 +8,7 @@ import { MagSection } from "./mag-section";
 
 export function MagHero() {
   const { content } = useSiteContent();
-  const role = content.magazine.roleLine;
+  const { roleLine, roleEcho, introLine, proofLine } = content.magazine;
 
   return (
     <section id="intro" className="scroll-mt-20 px-5 pb-12 pt-10 lg:pl-56 lg:pr-12 lg:pt-16">
@@ -27,17 +27,17 @@ export function MagHero() {
 
         <div className="relative mt-6 overflow-hidden">
           <MagStagger delayMs={200}>
-            <p className="mag-display text-[clamp(2.5rem,8vw,5rem)] font-semibold leading-[0.95]">{role}</p>
+            <p className="mag-display text-[clamp(2.5rem,8vw,5rem)] font-semibold leading-[0.95]">{roleLine}</p>
           </MagStagger>
           <MagStagger delayMs={280}>
             <p className="mag-display -mt-2 text-[clamp(2.5rem,8vw,5rem)] font-semibold leading-[0.95] text-mag-muted/35">
-              {role}
+              {roleEcho}
             </p>
           </MagStagger>
         </div>
 
         <MagStagger delayMs={360}>
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-mag-muted">{content.description}</p>
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-mag-muted">{introLine}</p>
         </MagStagger>
 
         <MagStagger delayMs={440}>
@@ -56,7 +56,7 @@ export function MagHero() {
               <MagCountStat key={m.label} value={m.value} label={m.label} delay={i * 80} large />
             ))}
           </div>
-          <p className="mt-8 max-w-2xl text-sm leading-relaxed text-mag-muted">{content.featuredCaseStudy.summary}</p>
+          <p className="mt-8 max-w-2xl text-sm leading-relaxed text-mag-muted">{proofLine}</p>
         </MagReveal>
       </div>
     </section>
@@ -92,7 +92,7 @@ export function MagBackgroundSection() {
       id="background"
       number="01"
       label="Background & Working Style"
-      title="An Android engineer who ships with ownership"
+      title={content.magazine.backgroundTitle}
       subtitle={content.bio}
     >
       <MagReveal>

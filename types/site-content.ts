@@ -66,6 +66,11 @@ export type MagazinePhilosophy = {
 export type MagazineContent = {
   volume: string;
   roleLine: string;
+  roleEcho: string;
+  introLine: string;
+  proofLine: string;
+  backgroundTitle: string;
+  navSubtitle: string;
   now: MagazineNow[];
   disciplines: string[];
   timeline: MagazineTimeline[];

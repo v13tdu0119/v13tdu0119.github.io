@@ -6,9 +6,9 @@ export const siteConfig = {
   name: "Việt Dương",
   nickname: "Dobby",
   username: "Dobby",
-  tagline: "1% better than 0% — Android developer from Vietnam",
+  tagline: "1% better than 0%",
   description:
-    "Portfolio of Việt Dương (Dobby) — Android developer in Ho Chi Minh City. Kotlin, Jetpack Compose, banking & logistics apps. Open to Junior+ and Middle Android roles.",
+    "Portfolio of Việt Dương (Dobby) — Kotlin, Jetpack Compose, banking & logistics apps in Ho Chi Minh City. Open to Junior+ and Middle mobile roles.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "en_US",
   location: "Ho Chi Minh City, Vietnam",
@@ -39,9 +39,9 @@ export const siteConfig = {
     ctaPrimary: "View projects",
     ctaSecondary: "Get in touch",
   },
-  bio: "Android developer based in Ho Chi Minh City with hands-on experience in banking, e-commerce, and transportation products. I turn product requirements into maintainable Kotlin code — MVVM, modular architecture, CI/CD, and security-conscious implementations.",
+  bio: "Based in Ho Chi Minh City with hands-on experience in banking, e-commerce, and transportation. I turn product requirements into maintainable Kotlin — MVVM, modular architecture, CI/CD, and security-conscious implementations.",
   bioExtra:
-    "I learn fast, commit often, and treat my GitHub as a public track record. If you need an Android engineer who communicates clearly and delivers with ownership, I'd love to talk.",
+    "I learn fast, commit often, and treat my GitHub as a public track record. I do my best work when a team needs someone to own the spec, the module boundaries, and the release — and still care about what users notice on screen.",
   stackIntro:
     "Mobile-first by default. Kotlin and Jetpack Compose are my core toolkit; React Native and Spring Boot extend my reach when the product calls for it.",
   funFacts: [
@@ -65,6 +65,13 @@ export const siteConfig = {
   magazine: {
     volume: "Vol. 01 · '26",
     roleLine: "Android developer",
+    roleEcho: "ship & scale",
+    introLine:
+      "Production Kotlin apps for banking and logistics — from modular rebuilds to Play Store releases.",
+    proofLine:
+      "At Staffun, rebuilt LINKON for 200+ daily drivers and shipped Sandtoner to Google Play with CI/CD from the ground up.",
+    backgroundTitle: "Thinks in systems, ships with ownership",
+    navSubtitle: "1% better than 0%",
     now: [
       { label: "Building", value: "KMM Movies Demo · Compose + offline cache" },
       { label: "Reading", value: "Clean Architecture · Robert C. Martin" },
@@ -88,7 +95,7 @@ export const siteConfig = {
       { year: "'26", title: "Open · Junior+ & Middle Android roles", detail: "HCMC-based, remote-friendly, reply within 24h." },
     ],
     philosophyIntro:
-      "Two ideas I return to when designing Android systems — keep the architecture clear enough to scale, and ship often enough to learn.",
+      "Two ideas I return to when designing systems — keep the architecture clear enough to scale, and ship often enough to learn.",
     philosophyStudies: [
       {
         code: "A.01",
@@ -125,9 +132,9 @@ export const siteConfig = {
     playStoreLabel: "Sandtoner on Google Play",
   },
   experienceIntro: {
-    title: "Experience",
+    title: "Three years shipping production mobile.",
     description:
-      "Production Android work across banking, logistics, and e-commerce — not tutorial projects. Highlights below focus on impact and ownership.",
+      "Banking at NAB, logistics and e-commerce at Staffun — highlights below focus on impact, not tutorial work.",
   },
   workExperience: [
     {
@@ -197,17 +204,17 @@ export const siteConfig = {
     },
   ],
   projectsIntro: {
-    title: "Selected projects",
+    title: "Side projects that stay in rotation.",
     description:
-      "Side projects and shipped work that reflect how I code — Android-heavy, with ML, games, and docs mixed in. Source code and commit history on GitHub.",
-    footnote: "Featured projects are the ones I'm most proud of. Others are still part of my learning journey.",
+      "Android-heavy repos on GitHub — ML, Compose, KMM, and games mixed in. Source and commit history included.",
+    footnote: "Featured work below; the rest is still part of how I learn.",
   },
   connect: {
-    title: "Let's connect",
+    title: "Let's build something good.",
     description:
-      "Looking for a Junior+ or Middle Android developer? Open to full-time roles, contracts, and serious collaborations. I reply within 24 hours.",
-    emailNote: "Best way to reach me:",
-    hireLine: "Open to opportunities — Junior+ & Middle Android Developer",
+      "Open to Junior+ and Middle mobile roles where craft and ownership matter. HCMC-based, remote-friendly — I reply within 24 hours.",
+    emailNote: "Direct line:",
+    hireLine: "Junior+ & Middle mobile roles · HCMC & remote",
   },
   stickyBubble: {
     greeting: "Hey, Dobby here",

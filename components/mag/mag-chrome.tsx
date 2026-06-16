@@ -33,7 +33,7 @@ export function MagNav() {
         <Link href="#intro" className="mag-display text-lg font-semibold leading-tight">
           {content.name}
         </Link>
-        <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-mag-muted">{content.author.jobTitle}</p>
+        <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-mag-muted">{content.magazine.navSubtitle}</p>
 
         <button
           type="button"
